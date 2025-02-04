@@ -362,4 +362,12 @@ export class BoardsComponent implements OnInit, OnDestroy {
       this.customDepartureSequence.next(this.customDepartureSequence.value -1);
     }
   }
+
+  addStation(stationCode: string, boardConfig: any) {
+    // Add logic to add a new station with the given board configuration
+  }
+
+  manualControlBoard(boardId: string, action: string) {
+    // Add logic to manually control a board with the given action
+  }
 }

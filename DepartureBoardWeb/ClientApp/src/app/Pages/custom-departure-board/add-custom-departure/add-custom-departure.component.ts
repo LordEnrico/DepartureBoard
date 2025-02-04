@@ -9,6 +9,7 @@ import { GoogleAnalyticsEventsService } from "src/app/Services/google.analytics"
 import { DomSanitizer } from "@angular/platform-browser";
 import { CustomDeparture } from "src/app/models/custom-departure.model";
 import {NotifierService} from "../../../Services/notifier.service";
+import { AdminBoardService } from "src/app/Services/admin-board.service";
 
 @Component({
   selector: "app-add-custom-departure",
@@ -37,7 +38,8 @@ export class AddCustomDepartureComponent {
     private route: ActivatedRoute,
     public googleAnalyticsEventsService: GoogleAnalyticsEventsService,
     private sanitizer: DomSanitizer,
-    private notifierService: NotifierService
+    private notifierService: NotifierService,
+    private adminBoardService: AdminBoardService
   ) {
     route.params.subscribe(() => {
       var id = this.route.snapshot.paramMap.get("id");
@@ -195,5 +197,9 @@ export class AddCustomDepartureComponent {
     this.notifierService.notify("success", "Saved Successfully");
     this.googleAnalyticsEventsService.emitEvent("CustomDepartures", "Saved");
     this.router.navigate(["custom-departures"]);
+  }
+
+  addStation(stationCode: string, boardConfig: any) {
+    this.adminBoardService.addStation(stationCode, boardConfig);
   }
 }
