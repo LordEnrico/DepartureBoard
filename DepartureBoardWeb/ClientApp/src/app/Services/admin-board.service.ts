@@ -137,4 +137,12 @@ export class AdminBoardService {
         this.activateBoardConfig(document.config, router)
       );
   }
+
+  manualControlBoard(boardId: string, action: string) {
+    // Add logic to manually control a board with the given action
+  }
+
+  addStation(stationCode: string, boardConfig: any) {
+    // Add logic to add a new station with the given board configuration
+  }
 }

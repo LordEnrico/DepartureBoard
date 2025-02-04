@@ -1,0 +1,23 @@
+<div class="control-panel">
+  <h2>Control Panel</h2>
+  <div class="manual-control">
+    <h3>Manual Control</h3>
+    <label for="boardId">Board ID:</label>
+    <input type="text" id="boardId" #boardIdInput>
+    <label for="action">Action:</label>
+    <select id="action" #actionInput>
+      <option value="start">Start</option>
+      <option value="stop">Stop</option>
+      <option value="pause">Pause</option>
+    </select>
+    <button (click)="manualControlBoard(boardIdInput.value, actionInput.value)">Submit</button>
+  </div>
+  <div class="add-station">
+    <h3>Add Station</h3>
+    <label for="stationCode">Station Code:</label>
+    <input type="text" id="stationCode" #stationCodeInput>
+    <label for="boardConfig">Board Configuration:</label>
+    <textarea id="boardConfig" #boardConfigInput></textarea>
+    <button (click)="addStation(stationCodeInput.value, boardConfigInput.value)">Add Station</button>
+  </div>
+</div>

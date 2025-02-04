@@ -1,0 +1,47 @@
+.control-panel {
+  padding: 20px;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.control-panel h2 {
+  margin-top: 0;
+}
+
+.manual-control,
+.add-station {
+  margin-bottom: 20px;
+}
+
+.manual-control label,
+.add-station label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.manual-control input,
+.add-station input,
+.add-station textarea,
+.manual-control select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.manual-control button,
+.add-station button {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.manual-control button:hover,
+.add-station button:hover {
+  background-color: #0056b3;
+}
